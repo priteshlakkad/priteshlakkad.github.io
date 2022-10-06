@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 50px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        padding: 8px 30px;
+        color: white;
+      }
+      .f1 img {
+        width: 15px;
+        padding: 0 0 0 30px;
+      }
+      .f1 a {
+        text-decoration: none;
+        color: white;
+      }
+      .f2 img {
+        width: 15px;
+        padding: 0 10px;
+      }
+      .f2 img {
+        text-decoration: none;
+        color: white;
+      }
+      .f2 a {
+        text-decoration: none;
+      }
+      .navigationbar {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 10px 50px;
+      }
+      .navigationbar img {
+        width: 200px;
+      }
+      .menu ul li {
+        list-style: none;
+        display: inline;
+        padding: 0 0 0 30px;
+      }
+      .menu ul li a {
+        text-decoration: none;
+        color: black;
+      }
+      .menu ul li a:hover {
+        color: blue;
+      }
+      .join {
+        padding: 15px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .join a {
+        text-decoration: none;
+        color: white;
+      }
+      .mimg {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 255, 0.7),
+            rgba(0, 0, 255, 0.7)
+          ),
+          url("header.jpg");
+        height: 640px;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+      }
+      .textw {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+      .textw h2 {
+        font-size: 40px;
+        font-weight: bolder;
+      }
+      .textw h1 {
+        font-size: 90px;
+        font-weight: bolder;
+      }
+
+      .search {
+        display: flex;
+        justify-content: center;
+      }
+      .courses {
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border: none;
+        border-right: 1px solid black;
+      }
+      .bt {
+        width: 250px;
+        height: 48px;
+        background-color: white;
+        border: none;
+        padding-left: 20px;
+      }
+      .bt1 {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .bt1 a {
+        text-decoration: none;
+        color: white;
+      }
+      .testttt {
+        background-image: url("overlay-bottom.png");
+        background-size: cover;
+        height: 76px;
+        margin-top: -76px;
+        z-index: 1;
+      }
+      .third {
+        margin: 200px 0;
+        display: flex;
+        justify-content: center;
+      }
+      .third .girlsimg img {
+        width: 500px;
+      }
+      .imgwriting {
+        padding: 0 0 0 20px;
+      }
+      .first h4 {
+        color: brown;
+        padding-bottom: 5px;
+        border-bottom: 2px dashed brown;
+        width: fit-content;
+      }
+      .first h1 {
+        font-size: 3.5rem;
+      }
+      .first a {
+        text-decoration: none;
+        color: brown;
+      }
+      .second {
+        display: flex;
+        text-align: center;
+        color: white;
+      }
+      .s1 {
+        background-color: green;
+        padding: 5.5px 30px;
+      }
+      .s2 {
+        background-color: blue;
+        padding: 0 40px;
+      }
+      .s3 {
+        background-color: palevioletred;
+        padding: 0 20px;
+      }
+      .s4 {
+        background-color: darkorange;
+        padding: 0 30px;
+      }
+      .fourth {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 255, 0.1),
+            rgba(0, 0, 255, 0.1)
+          ),
+          url("bg-image.jpg");
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+      }
+      .featurewriting {
+        padding: 96px 20px 0 0;
+      }
+      .featurewriting1 a {
+        text-decoration: none;
+        color: brown;
+      }
+      .featurewriting1 h4 {
+        color: brown;
+        padding-bottom: 5px;
+        border-bottom: 2px dashed brown;
+        width: fit-content;
+      }
+      .featurewriting1 h1 {
+        font-size: 3.5rem;
+      }
+      .imgw {
+        display: flex;
+        padding: 20px 0 0 0;
+      }
+      .imgw h4 {
+        padding: 0 0 0 10px;
+        margin: 0px;
+      }
+      .imgw p {
+        padding: 0 0 0 10px;
+      }
+      .fifth {
+        display: flex;
+        justify-content: center;
+        margin: 200px 0 0 0;
+      }
+      .fifth h4 {
+        color: brown;
+        padding-bottom: 5px;
+        border-bottom: 2px dashed brown;
+        width: fit-content;
+        margin-left: 275px;
+      }
+      .fifth h1 {
+        text-align: center;
+        font-size: 50px;
+      }
+      .fifth .abc a {
+        text-decoration: none;
+        color: brown;
+      }
+      .six {
+        display: flex;
+        position: relative;
+      }
+
+      .six1 {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.1)
+          ),
+          url("courses-5.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 520px;
+      }
+      .six2 {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.1)
+          ),
+          url("courses-6.jpg");
+        background-size: cover;
+        width: 100%;
+      }
+      .six3 {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.1)
+          ),
+          url("courses-1.jpg");
+        background-size: cover;
+        width: 100%;
+      }
+      .six4 {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.1)
+          ),
+          url("courses-2.jpg");
+        background-size: cover;
+        width: 100%;
+      }
+      .sixf {
+        color: white;
+        padding-top: 380px;
+      }
+      .sixf h4 {
+        text-align: center;
+      }
+      .sixs {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 30px;
+      }
+
+      .seven {
+        background-image: linear-gradient(
+            0deg,
+            rgba(135, 206, 235, 0.2),
+            rgba(135, 206, 235, 0.2)
+          ),
+          url("bg-image.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .seven2 {
+        margin: 100px 0px;
+        padding: 50px 30px;
+        background-color: white;
+      }
+      .seven3 h1 {
+        margin-top: 0px;
+        text-align: center;
+        font-size: 40px;
+      }
+      .seven4 {
+        display: flex;
+        justify-content: center;
+      }
+      .seven4 input {
+        width: 290px;
+        height: 48px;
+        background-color: lightblue;
+        border: none;
+        padding-left: 10px;
+      }
+      .seven4 .z1 {
+        margin-left: 10px;
+      }
+      .seven5 {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+      }
+      .seven5 input {
+        width: 290px;
+        height: 48px;
+        background-color: lightblue;
+        border: none;
+        padding-left: 10px;
+      }
+      .seven5 button {
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        background-color: blue;
+        border: none;
+        margin-left: 10px;
+        color: white;
+        cursor: pointer;
+      }
+      .seven5 a {
+        text-decoration: none;
+        color: white;
+      }
+      .eight {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+      }
+      .eight h4 {
+        padding: 0 0 5px 0;
+        border-bottom: 1px dashed brown;
+        color: brown;
+        width: fit-content;
+        margin-left: 170px;
+      }
+      .eight h1 {
+        font-size: 50px;
+      }
+      .eight a {
+        text-decoration: none;
+        color: brown;
+      }
+      .nine {
+        display: flex;
+        justify-content: center;
+      }
+
+      .nine img {
+        display: block;
+        margin: 0 0 0 20px;
+      }
+      .ninefirst {
+        padding: 10px;
+        text-align: center;
+        background-color: lightblue;
+        margin: 0 0 0 20px;
+      }
+      .nine2 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .nine2 img {
+        width: 20px;
+        height: auto;
+      }
+      .ten {
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 255, 0.1),
+            rgba(0, 0, 255, 0.1)
+          ),
+          url("bg-image.jpg");
+        background-size: cover;
+        margin-top: 200px;
+      }
+      .ten1 h4 {
+        color: brown;
+        border-bottom: 1px dashed brown;
+        width: fit-content;
+        background-repeat: no-repeat;
+        padding: 5px;
+      }
+      .ten1 {
+        padding: 50px 0px;
+      }
+      .ten1 h1 {
+        font-size: 50px;
+      }
+      .ten a {
+        text-decoration: none;
+        color: brown;
+      }
+      .ten2 {
+        background-color: white;
+        margin: 70px 0 70px 30px;
+        padding: 0 0 25px 30px;
+      }
+      .ten3 {
+        text-align: right;
+      }
+      .ten3 a {
+        cursor: pointer;
+      }
+      .ten5 {
+        padding-right: 50px;
+      }
+      .ten6 {
+        display: flex;
+      }
+      .ten7 {
+        padding-left: 20px;
+      }
+      .eleven {
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+      }
+      .eleven a {
+        text-decoration: none;
+        color: black;
+      }
+      .eleven1 {
+        background-color: lightblue;
+      }
+      .eleven2 {
+        padding: 50px 100px 30px 30px;
+      }
+      .eleven3 {
+        display: flex;
+        padding-bottom: 30px;
+      }
+      .eleven4 {
+        padding-left: 20px;
+      }
+      .eleven5 {
+        padding-left: 30px;
+      }
+      .eleven6 h4 {
+        color: brown;
+        border-bottom: 2px dashed brown;
+        width: fit-content;
+      }
+      .eleven6 h1 {
+        font-size: 50px;
+      }
+      .eleven6 a {
+        text-decoration: none;
+        color: brown;
+      }
+      .eleven7 input {
+        width: 250px;
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        border-bottom: 0.5px solid darkgray;
+      }
+      .eleven8 input {
+        margin-top: 30px;
+        width: 100%;
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        border-bottom: 0.5px solid darkgray;
+      }
+      .eleven9 textarea {
+        margin-top: 30px;
+        height: 100px;
+        width: 100%;
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        border-bottom: 0.5px solid darkgray;
+      }
+      .eleven10 button {
+        margin-top: 30px;
+        padding: 15px 25px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .eleven10 a {
+        text-decoration: none;
+        color: white;
+      }
+      .thirteen {
+        margin-top: 200px;
+        background-image: url("overlay-top.png");
+        background-size: cover;
+        height: 76px;
+      }
+      .twelve {
+        background-color: black;
+        color: white;
+      }
+      .twelvefirst {
+        display: flex;
+        justify-content: center;
+      }
+      .twelve1 {
+        padding-top: 100px;
+      }
+      .twelve1 img {
+        width: 200px;
+      }
+      .twelve1 p {
+        letter-spacing: 1px;
+      }
+      .twelve2 {
+        margin-top: 100px;
+        padding-left: 50px;
+      }
+      .twelve2 a {
+        text-decoration: none;
+        color: white;
+      }
+      .twelve3 {
+        display: flex;
+      }
+      .twelve3 input {
+        width: 420px;
+        height: 48px;
+        background-color: white;
+        border: none;
+        padding-left: 20px;
+      }
+      .twelve3 button {
+        width: 100px;
+        height: 50px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .twelve4 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .twelve4 p {
+        color: darkgray;
+      }
+      .twelve4 h3 {
+        font-size: 30px;
+      }
+      .twelve4 a {
+        text-decoration: none;
+        color: darkgray;
+      }
+      .twelve6 {
+        display: flex;
+      }
+      .twelve6 img {
+        width: 15px;
+        height: 35px;
+      }
+      .twelve6 p {
+        padding-left: 20px;
+      }
+      .twelve7 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+      }
+      .twelve7 img {
+        width: 25px;
+      }
+      .twelve10 {
+        display: flex;
+        justify-content: space-around;
+      }
+      .twelve10 p {
+        color: darkgray;
+      }
+      .twelve10 a {
+        text-decoration: none;
+        color: darkgray;
+      }
+      @media only screen and (max-width: 600px) {
+        body {
+          margin: 0px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .header {
+          padding: 8px 0px;
+        }
+        .header .f1 img {
+          padding: 0px 0px 0px 10px;
+        }
+        .
+      }
+      @media only screen and (max-width: 600px) {
+        .navigationbar {
+          flex-direction: column;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .textw {
+          top: 48%;
+        }
+        .textw h2 {
+          font-size: 35px;
+        }
+        .textw h1 {
+          font-size: 50px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .third {
+          flex-direction: column;
+          text-align: left;
+          margin: 100px 0px;
+        }
+        .third .girlsimg {
+          text-align: center;
+        }
+        .third .imgwriting {
+          padding: 0px;
+        }
+        .third .imgwriting h4 {
+          text-align: center;
+          margin-left: 42%;
+        }
+        .third .imgwriting h1 {
+          text-align: center;
+          font-size: 50px;
+        }
+        .third .imgwriting p {
+          margin-left: 40px;
+        }
+        .third .second {
+          align-items: center;
+          justify-content: center;
+        }
+        .third .second .s1 {
+          padding: 0px 20px;
+        }
+        .third .second .s2 {
+          padding: 0px 30px;
+        }
+        .third .second .s3 {
+          padding: 0px 10px;
+        }
+        .third .second .s4 {
+          padding: 0px 20px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .fourth {
+          flex-direction: column;
+          align-items: center;
+        }
+        .fourth .featurewriting {
+          padding: 96px 0px 0px 0px;
+        }
+        .fourth .featurewriting1 h4 {
+          margin-left: 35%;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .fifth {
+          margin: 100px 0 0 0;
+        }
+        .fifth h4 {
+          margin-left: 35%;
+        }
+        .fifth h1 {
+          font-size: 30px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .six {
+          flex-direction: column;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .seven2 {
+          background-color: white;
+          margin: 50px;
+        }
+        .seven2 input {
+          margin: 0px 0px 10px 0px;
+        }
+        .seven4 {
+          flex-direction: column;
+          align-items: center;
+        }
+        .seven4 .z1 {
+          margin-left: 0px;
+        }
+        .seven5 {
+          flex-direction: column;
+          align-items: center;
+          padding-top: 0px;
+        }
+        .seven5 button {
+          margin-left: 0px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .nine {
+          flex-direction: column;
+          align-items: center;
+        }
+        .nine1 img{
+          margin: 0px;
+        }
+        .ninefirst {
+          margin: 0px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .ten {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 100px;
+        }
+        .ten h4 {
+          margin-left: 32%;
+        }
+        .ten h1 {
+          text-align: center;
+        }
+        .ten2 {
+          margin: 0px 0 70px 0px;
+        }
+        .ten7 h4 {
+          margin-left: 0px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .eleven {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 100px;
+        }
+      }
+      .eleven3 {
+        align-items: center;
+      }
+      .eleven6 h4 {
+        margin: 25px 0 0 40%;
+      }
+      .eleven6 h1 {
+        text-align: center;
+      }
+      @media only screen and (max-width: 600px) {
+        .twelve {
+          margin-top: -100px;
+        }
+        .twelvefirst {
+          flex-direction: column;
+          align-items: center;
+        }
+        .twelve1 {
+          margin-left: 0px;
+          padding-top: 50px;
+        }
+        .twelve2 {
+          margin-top: 0px;
+          padding-left: 0px;
+        }
+        .twelve3 input {
+          width: 395px;
+        }
+        .twelve6 .z2 {
+          padding-left: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="f1">
+        <a href="#"> <img src="phoneicon.jpg" /> +012 345 6789 </a>
+        <a href="#"> <img class="z3" src="messageicon.jpg" /> info@example.com </a>
+      </div>
+
+      <div class="f2">
+        <a href="#">
+          <img src="https://thumbs.dreamstime.com/b/web-189016286.jpg" />
+        </a>
+        <a href="#">
+          <img
+            src="https://flaticons.net/icon.php?slug_category=brand-identity&slug_icon=twitter-birdhttps://flaticons.net/icon.php?slug_category=brand-identity&slug_icon=twitter-bird"
+          />
+        </a>
+        <a href="#"> <img src="inicon..svg" /> </a>
+        <a href="#">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxcFncjSRYjJWiHjU_2ksLkcSNdh4gG9lnUA&usqp=CAU"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="https://c8.alamy.com/zooms/9/8d318604055e4950a90bf3b6bb056cc6/2e2fhta.jpg"
+        /></a>
+      </div>
+    </div>
+
+    <div class="navigationbar">
+      <div class="logo">
+        <img src="https://educatedot.files.wordpress.com/2017/08/logo.jpg" />
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a style="color: blue" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Courses</a></li>
+          <li>
+            <select style="border: none; background-color: white">
+              <option value="0">page</option>
+              <option value="1">page1</option>
+              <option value="2">page2</option>
+            </select>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <button class="join"><a href="#">Join Us</a></button>
+    </div>
+
+    <div class="middle">
+      <div class="mimg">
+        <div class="textw">
+          <h2>Learn From Home</h2>
+          <h1>Education Courses</h1>
+
+          <div class="search">
+            <button class="courses">
+              <select style="border: none; background-color: white">
+                <option value="#">courses</option>
+                <option value="#">page1</option>
+                <option value="#">page2</option>
+              </select>
+            </button>
+            <input class="bt" type="text" placeholder="Keyword" />
+
+            <button class="bt1" type="submit"><a href="#">Search</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="testttt"></div>
+    </div>
+
+    <div class="third">
+      <div class="girlsimg">
+        <img src="about.jpg" />
+      </div>
+
+      <div class="imgwriting">
+        <div class="first">
+          <h4><a href="#">ABOUT US</a></h4>
+          <h1>
+            First Choice For Online <br />
+            Education Anywhere
+          </h1>
+          <p>
+            Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam
+            dolor diam ipsum et,<br />
+            tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos
+            sadipscing <br />labore. Clita erat ipsum et lorem et sit, sed stet
+            no labore lorem sit. Sanctus clita duo <br />justo et tempor
+            consetetur takimata eirmod, dolores takimata consetetur invidunt<br />
+            magna dolores aliquyam dolores dolore. Amet erat amet et magna
+          </p>
+        </div>
+
+        <div class="second">
+          <div class="s1">
+            <h1>10</h1>
+            <h5>AVAILABLE <br />SUBJECT</h5>
+          </div>
+          <div class="s2">
+            <h1>111</h1>
+            <h5>ONLINE <br />COURSES</h5>
+          </div>
+          <div class="s3">
+            <h1>10</h1>
+            <h5>SKILLED <br />INSTRUCTORS</h5>
+          </div>
+          <div class="s4">
+            <h1>105</h1>
+            <h5>HAPPY <br />STUDENTS</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fourth">
+      <div class="featurewriting">
+        <div class="featurewriting1">
+          <h4><a href="#">WHY CHOOSE US?</a></h4>
+          <h1>
+            Why You Should Start <br />
+            Learning With Us?
+          </h1>
+          <p>
+            Aliquyam accusam clita nonumy ipsum sit sea clita ipsum clita, ipsum
+            dolores amet <br />
+            voluptua duo dolores et sit ipsum rebum, sadipscing et erat eirmod
+            diam kasd labore <br />
+            clita est. Diam sanctus gubergren sit rebum clita amet.
+          </p>
+        </div>
+
+        <div class="imgw">
+          <div>
+            <img src="Screenshot from 2022-09-02 14-48-55.png" />
+          </div>
+          <div class="iw">
+            <h4>Skilled instructors</h4>
+            <p>
+              Labore rebum duo est sit dolore eos sit tempor eos stet, vero vero
+              clita <br />
+              magna kasd no nonumy et eos dolor magna ipsum.
+            </p>
+          </div>
+        </div>
+
+        <div class="imgw">
+          <div>
+            <img src="Screenshot from 2022-09-02 14-49-08.png" />
+          </div>
+          <div class="iw">
+            <h4>international certificate</h4>
+            <p>
+              Labore rebum duo est sit dolore eos sit tempor eos stet, vero vero
+              clita <br />
+              magna kasd no nonumy et eos dolor magna ipsum.
+            </p>
+          </div>
+        </div>
+
+        <div class="imgw">
+          <div>
+            <img src="Screenshot from 2022-09-02 14-49-17.png" />
+          </div>
+          <div class="iw">
+            <h4>Online Classes</h4>
+            <p>
+              Labore rebum duo est sit dolore eos sit tempor eos stet, vero vero
+              clita <br />
+              magna kasd no nonumy et eos dolor magna ipsum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="featureimg">
+        <img style="height: 750px" src="feature.jpg" />
+      </div>
+    </div>
+
+    <div class="fifth">
+      <div class="abc">
+        <h4><a href="#">OUR COURSES</a></h4>
+        <h1>Checkout New Releases Of Our <br />Courses</h1>
+      </div>
+    </div>
+
+    <div class="six">
+      <div class="six1">
+        <div class="sixf">
+          <h4>
+            Web Design & Development Courses <br />
+            for beginners
+          </h4>
+          <hr />
+          <div class="sixs">
+            <p>Jhone Doe</p>
+            <p>4.5(250)</p>
+          </div>
+        </div>
+      </div>
+      <div class="six2">
+        <div class="sixf">
+          <h4>
+            Web Design & Development Courses <br />
+            for beginners
+          </h4>
+          <hr />
+          <div class="sixs">
+            <p>Jhone Doe</p>
+            <p>4.5(250)</p>
+          </div>
+        </div>
+      </div>
+      <div class="six3">
+        <div class="sixf">
+          <h4>
+            Web Design & Development Courses <br />
+            for beginners
+          </h4>
+          <hr />
+          <div class="sixs">
+            <p>Jhone Doe</p>
+            <p>4.5(250)</p>
+          </div>
+        </div>
+      </div>
+      <div class="six4">
+        <div class="sixf">
+          <h4>
+            Web Design & Development Courses <br />
+            for beginners
+          </h4>
+          <hr />
+          <div class="sixs">
+            <p>Jhone Doe</p>
+            <p>4.5(250)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seven">
+      <div class="seven2">
+        <div class="seven3">
+          <h1>30% Off For New Students</h1>
+        </div>
+        <div class="seven4">
+          <input type="text" placeholder="Your Name" />
+          <input class="z1" type="text" placeholder="Your Email" />
+        </div>
+        <div class="seven5">
+          <input type="text" placeholder="Select A courses" />
+          <button><a href="#">Sign Up Now</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="eight">
+      <div class="eight1">
+        <h4><a href="#">INSTRUCTORS</a></h4>
+        <h1>Meet Our Instructors</h1>
+      </div>
+    </div>
+
+    <div class="nine">
+      <div class="nine1">
+        <img src="team-1.jpg" />
+        <div class="ninefirst">
+          <h4>Instructors Name</h4>
+          <p>Web Design & Development</p>
+          <div class="nine2">
+            <a href="#">
+              <img
+                src="https://1000logos.net/wp-content/uploads/2021/04/Twitter-logo.png"
+            /></a>
+            <a href="#">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/F_icon_reversed.svg/1200px-F_icon_reversed.svg.png"
+            /></a>
+            <a href="#">
+              <img
+                src="https://www.clipartmax.com/png/middle/135-1350630_lets-network-linkedin-logo-blue-png.png"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkNHcKqqkMQCMXKe5wqWnQOlPmz4mQlwGjQtmjPa0ERBdRsBxsIn0FyMiVTJJifah29Jw&usqp=CAU"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://thumbs.dreamstime.com/b/dreamstime-template-155470583.jpg"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nine1">
+        <img src="team-2.jpg" />
+        <div class="ninefirst">
+          <h4>Instructors Name</h4>
+          <p>Web Design & Development</p>
+          <div class="nine2">
+            <a href="#">
+              <img
+                src="https://1000logos.net/wp-content/uploads/2021/04/Twitter-logo.png"
+            /></a>
+            <a href="#">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/F_icon_reversed.svg/1200px-F_icon_reversed.svg.png"
+            /></a>
+            <a href="#">
+              <img
+                src="https://www.clipartmax.com/png/middle/135-1350630_lets-network-linkedin-logo-blue-png.png"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkNHcKqqkMQCMXKe5wqWnQOlPmz4mQlwGjQtmjPa0ERBdRsBxsIn0FyMiVTJJifah29Jw&usqp=CAU"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://thumbs.dreamstime.com/b/dreamstime-template-155470583.jpg"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nine1">
+        <img src="team-3.jpg" />
+        <div class="ninefirst">
+          <h4>Instructors Name</h4>
+          <p>Web Design & Development</p>
+          <div class="nine2">
+            <a href="#">
+              <img
+                src="https://1000logos.net/wp-content/uploads/2021/04/Twitter-logo.png"
+            /></a>
+            <a href="#">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/F_icon_reversed.svg/1200px-F_icon_reversed.svg.png"
+            /></a>
+            <a href="#">
+              <img
+                src="https://www.clipartmax.com/png/middle/135-1350630_lets-network-linkedin-logo-blue-png.png"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkNHcKqqkMQCMXKe5wqWnQOlPmz4mQlwGjQtmjPa0ERBdRsBxsIn0FyMiVTJJifah29Jw&usqp=CAU"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://thumbs.dreamstime.com/b/dreamstime-template-155470583.jpg"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ten">
+      <div class="ten1">
+        <h4><a href="#">TESTIMONIAL</a></h4>
+        <h1>
+          What Say Our <br />
+          Students
+        </h1>
+        <p>
+          Dolor est dolores et nonumy sit labore dolore est sed <br />
+          rebum amet,justo duo ipsum sanctus dolore magna rebum <br />
+          sit et. Diam lorem ea sea at. Nonumy et at at sed justo est <br />
+          nonumy tempor. vero sea ea eirmod, elitr ea amet diam <br />
+          ipsum at amet. Erat sed stet eos ipsum diam
+        </p>
+      </div>
+
+      <div class="ten2">
+        <div class="ten8">
+          <div class="ten3">
+            <a href="#">
+              <img src="Screenshot from 2022-09-08 16-34-32.png"
+            /></a>
+          </div>
+          <div class="ten4">
+            <a href="#">
+              <img src="Screenshot from 2022-09-08 16-35-18.png" />
+            </a>
+          </div>
+          <div class="ten5">
+            <p>
+              Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est
+              est
+              <br />
+              ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor
+              duo <br />
+              ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem
+            </p>
+          </div>
+
+          <div class="ten6">
+            <img src="testimonial-2.jpg" />
+            <div class="ten7">
+              <h4>Students Name</h4>
+              <p>Web Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="eleven">
+      <div class="eleven1">
+        <div class="eleven2">
+          <div class="eleven3">
+            <a href="#">
+              <img src="Screenshot from 2022-09-08 17-26-43.png" />
+            </a>
+            <div class="eleven4">
+              <h3><a href="#">Our Location</a></h3>
+              <p><a href="#">123 Street, New York, USA</a></p>
+            </div>
+          </div>
+
+          <div class="eleven3">
+            <a href="#">
+              <img src="Screenshot from 2022-09-08 17-27-50.png"
+            /></a>
+            <div class="eleven4">
+              <h3><a href="#">Call Us</a></h3>
+              <p><a href="#">+012 345 6789</a></p>
+            </div>
+          </div>
+
+          <div class="eleven3">
+            <a href="#">
+              <img src="Screenshot from 2022-09-08 17-28-06.png" />
+            </a>
+            <div class="eleven4">
+              <h3><a href="#">Email Us</a></h3>
+              <p><a href="#">info@example.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="eleven5">
+        <div class="eleven6">
+          <h4><a href="#">NEED HELP?</a></h4>
+          <h1>Send Us A Message</h1>
+        </div>
+        <div class="eleven7">
+          <input type="text" placeholder="Your Name" />
+          <input
+            style="margin-left: 20px"
+            type="text"
+            placeholder="Your Email"
+          />
+        </div>
+        <div class="eleven8">
+          <input type="text" placeholder="Subject" />
+        </div>
+        <div class="eleven9">
+          <textarea placeholder="Message"></textarea>
+        </div>
+        <div class="eleven10">
+          <button><a href="#">Send Message</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="twelve">
+      <div class="thirteen"></div>
+      <div class="twelvefirst">
+        <div class="twelve1">
+          <img src="https://educatedot.files.wordpress.com/2017/08/logo.jpg" />
+          <p>
+            Accusam nonumy clita sed rebum kasd eirmod elitr. ipsum ea lorem at
+            <br />
+            et diam est, tempor rebum ipsum sit ea tempor stet et consetetur
+            <br />
+            dolores. justo stet diam ipsum lorem vero clita diam
+          </p>
+        </div>
+        <div class="twelve2">
+          <h3><a href="#">Newsletter</a></h3>
+          <div class="twelve3">
+            <input type="text" placeholder="Your Email Address" />
+            <button><a href="#">Sign Up</a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="twelve4">
+        <div class="twelve5">
+          <h3>Get In Touch</h3>
+          <div class="twelve6">
+            <a href="#">
+              <img
+                style="width: 20px; height: 45px"
+                src="https://cdn4.iconfinder.com/data/icons/liu-square-blac/60/location-square-social-media-512.png"
+            /></a>
+            <p class="z2"><a href="#">123 Street, New Yourk, USA</a></p>
+          </div>
+          <div class="twelve6">
+            <a href="#"><img src="phoneicon.jpg" /></a>
+            <p><a href="#">+012 345 67890></a></p>
+          </div>
+          <div class="twelve6">
+            <a href="#"> <img src="messageicon.jpg" /></a>
+            <p><a href="#">info@example.com</a></p>
+          </div>
+          <div class="twelve7">
+            <a href="#">
+              <img
+                src="https://flaticons.net/icon.php?slug_category=brand-identity&slug_icon=twitter-birdhttps://flaticons.net/icon.php?slug_category=brand-identity&slug_icon=twitter-bird"
+            /></a>
+            <a href="#">
+              <img src="https://thumbs.dreamstime.com/b/web-189016286.jpg" />
+            </a>
+            <a href="#"> <img src="inicon..svg" /> </a>
+            <a href="#">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxcFncjSRYjJWiHjU_2ksLkcSNdh4gG9lnUA&usqp=CAU"
+            /></a>
+          </div>
+        </div>
+        <div class="twelve8">
+          <h3>Our Courses</h3>
+          <p><a href="#">Web Design</a></p>
+          <p><a href="#">Apps Design</a></p>
+          <p><a href="#">Marketing</a></p>
+          <p><a href="#">Research</a></p>
+          <p><a href="#">SEO</a></p>
+        </div>
+        <div class="twelve9">
+          <h3>Quick Links</h3>
+          <p><a href="#">privacy policy</a></p>
+          <p><a href="#">terms & condition</a></p>
+          <p><a href="#">Regular FAQs</a></p>
+          <p><a href="#">Help & support</a></p>
+          <p><a href="#">Contact</a></p>
+        </div>
+      </div>
+      <hr style="margin-top: 100px; border: 0.5px solid darkgray" />
+      <div class="twelve10">
+        <p>
+          <a href="#">
+            copyright@<span style="color: white">Your Site Name.</span>All
+            Rights Reserved.
+          </a>
+        </p>
+
+        <p>
+          <a href="#">Design by <span style="color: white">HTML Codex</span></a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
